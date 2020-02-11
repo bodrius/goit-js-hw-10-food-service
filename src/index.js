@@ -33,11 +33,11 @@ defaultTheme();
 
 function savedChangeTheme(event) {
   console.log(event);
-  if (event.target.checked === true) {
+  if (event.target.checked) {
     themeShow.classList.add(Theme.DARK);
     themeShow.classList.remove(Theme.LIGHT);
     localStorage.setItem('Theme', 'dark-theme');
-  } else if (event.target.checked === false) {
+  } else if (!event.target.checked) {
     themeShow.classList.add(Theme.LIGHT);
     themeShow.classList.remove(Theme.DARK);
     localStorage.setItem('Theme', 'light-theme');
